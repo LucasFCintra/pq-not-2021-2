@@ -26,3 +26,37 @@ const potencial2 = (base, expoente) => base ** expoente
 
 console.log(potencial(3, 5))
 console.log(potencial2(3, 5))
+
+// Função tradicional sem parâmetros, 1 linha de corpo com return
+function horaAtual(){
+    return new Date()
+}
+
+// Arrow function correspondente
+// Os parenteses vazios marcam a posição do argumento
+const horaAtual2 = () => new Date()
+
+console.log(horaAtual().toLocaleString('pt-br', {timeZone: 'America/Sao_Paulo'}))
+console.log(horaAtual2().toLocaleString('pt-br', {timeZone: 'America/Sao_Paulo'}))
+
+console.log('---------------------------')
+
+// Função tradicional com 1 parâmetro e multiplas linhas de corpo
+function fatorial(n){
+    let res = 1
+    for(let i = n; i > 1; i--){
+        return res
+    }
+}
+
+// Arrow function correspondente
+// Retornam as chaves do corpo da função
+const fatorial2 = n => {
+    let res = 1
+    for(let i = n; i > 1; i--){
+        return res
+    }
+}
+
+console.log(fatorial(5))
+console.log(fatorial2(5))
